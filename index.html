@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    /* Global Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2b6cb0;
+    }
+
+    /* Shared Section Styles */
+    section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2d3748;
+    }
+
+    /* Home / Hero Section (Centered Content & Image) */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 80vh;
+      padding: 4rem 5%;
+      background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+      border-radius: 0 0 20px 20px;
+    }
+
+    .hero-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-image {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #1a202c;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #4a5568;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #2b6cb0;
+      color: #fff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #2c5282;
+    }
+
+    /* About Section */
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: #4a5568;
+    }
+
+    /* Products Section */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #2d3748;
+    }
+
+    .product-description {
+      color: #718096;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #2d3748;
+      color: #a0aec0;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="Lp.jpg" alt="LP">
+      <text ="LP"
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-image-container">
+      <img class="hero-image" src="Lp.jpg" alt="Centered Logo">
+    </div>
+
+    <h1>Welcome to Our Official Page</h1>
+    <p>Discover high-quality solutions designed with precision to deliver value to your daily projects.</p>
+    <a href="#products" class="btn">Explore Products</a>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="brand.jpg" alt="About Us">
+      </div>
+      <div class="about-text">
+        <p>We are dedicated to designing simple, elegant, and effective solution systems. Our focus remains on delivering top-tier experiences and modern interface standards.</p>
+        <p>Our team works continuously to expand ideas and turn visionary concepts into practical, working software everyday.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr style="border: 0; border-top: 1px solid #5392e6; max-width: 1200px; margin: 0 auto;">
+
+  <section id="products">
+    <h2 class="section-title">Our Products</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="bag.jfif" alt="Product 1">
+        <div class="product-info">
+          <h3 class="bag Brand">Audio Headset Pro</h3>
+          <p class="product-description">At **LP**, we craft modern, durable, and thoughtfully designed bags that seamlessly blend style with functional simplicity for your everyday journeys.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="iphone-17-pro-colors.png" alt="Product 2">
+        <div class="product-info">
+          <h3 class="iphone17">Smart Fitness Band</h3>
+          <p class="product-description">Track daily fitness goals, receive immediate alerts, and stay active throughout the day.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="smart watch" alt="Product 3">
+        <div class="product-info">
+          <h3 class="smart watch">Desk Workspace Light</h3>
+          <p class="product-description">Energy-saving minimalist lighting equipped with dynamic brightness settings.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Brand Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
